@@ -40,7 +40,6 @@ SELECT name, capital
  WHERE LENGTH (name) = LENGTH (capital)
  
  --6.
-
 /*
 Show the name and per-capita GDP for those countries with a GDP of at least one trillion (1000000000000; that is 12 zeros). Round this value to the nearest 1000.
 Show per-capita GDP for the trillion dollar countries to the nearest $1000.
@@ -48,4 +47,25 @@ Show per-capita GDP for the trillion dollar countries to the nearest $1000.
 SELECT name, ROUND (gdp/population, -3)
 FROM world
 WHERE gdp >= 1000000000000
+
+--7.
+/*
+Show the name and the capital where the first letters of each match. Don't include countries where the name and the capital are the same word.
+*/
+SELECT name, capital
+FROM world
+WHERE name <> capital AND LEFT (name,1) = LEFT(capital,1)
+
+--8.
+/*
+Find the country that has all the vowels and no spaces in its name.
+*/
+SELECT name
+   FROM world
+WHERE name LIKE '%a%' AND 
+name  LIKE '%e%' AND 
+name  LIKE '%i%' AND 
+name  LIKE '%o%' AND 
+name  LIKE '%u%' AND 
+name NOT LIKE '% %'
 
