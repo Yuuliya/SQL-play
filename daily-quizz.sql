@@ -33,6 +33,15 @@ WHERE continent = 'South America'
 
 --5.
 /*
+Show the name and capital where the name and the capital have the same number of characters.
+*/
+SELECT name, capital
+  FROM world
+ WHERE LENGTH (name) = LENGTH (capital)
+ 
+ --6.
+
+/*
 Show the name and per-capita GDP for those countries with a GDP of at least one trillion (1000000000000; that is 12 zeros). Round this value to the nearest 1000.
 Show per-capita GDP for the trillion dollar countries to the nearest $1000.
 */
