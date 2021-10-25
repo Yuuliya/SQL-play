@@ -69,3 +69,17 @@ name  LIKE '%o%' AND
 name  LIKE '%u%' AND 
 name NOT LIKE '% %'
 
+--9.
+/*
+Find the countries that contain the letter x.
+*/
+SELECT name FROM world
+  WHERE name LIKE '%x%'
+
+--10.
+/*
+Find the countries that have three or more a in the name.
+*/
+SELECT name
+FROM world
+WHERE name LIKE '%a%a%a%' 
