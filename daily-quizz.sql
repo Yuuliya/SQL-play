@@ -1,18 +1,3 @@
---1. 
-/*
-Show the countries which have a name that includes the word 'United'
-*/
-SELECT name
-FROM world
-WHERE name LIKE '%United%'
-
---2.
-/*
-Show the countries that are big by area or big by population. Show name, population and area.
-*/
-SELECT name, population, area
-FROM world
-WHERE area > 3000000 OR population > 250000000
 
 --3.
 /*
@@ -91,3 +76,10 @@ Find the countries that have "t" as the second character.
 SELECT name FROM world
 WHERE name LIKE '_t%'
 ORDER by name
+
+--12.
+/*
+Find the countries that have exactly four characters.
+*/
+SELECT name FROM world
+ WHERE name LIKE '____'
