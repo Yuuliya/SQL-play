@@ -83,3 +83,11 @@ Find the countries that have three or more a in the name.
 SELECT name
 FROM world
 WHERE name LIKE '%a%a%a%' 
+
+--11.
+/*
+Find the countries that have "t" as the second character.
+*/
+SELECT name FROM world
+WHERE name LIKE '_t%'
+ORDER by name
