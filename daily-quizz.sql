@@ -83,3 +83,21 @@ Find the countries that have exactly four characters.
 */
 SELECT name FROM world
  WHERE name LIKE '____'
+
+--13.
+/*
+Find the country where the capital is the country plus "City".
+*/
+SELECT name
+  FROM world
+ WHERE capital = concat(name, ' City')
+
+
+
+
+
+
+
+
+
+
