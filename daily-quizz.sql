@@ -1,12 +1,10 @@
 
---3.
+-15.
 /*
-Show the countries that are big by area (more than 3 million) or big by population (more than 250 million) but not both. Show name, population and area.
+Find the capital and the name where the capital is an extension of name of the country.
 */
-SELECT name, population, area
-FROM world
-WHERE (area > 3000000 AND population < 250000000)
-  OR (area < 3000000 and population > 250000000)
+SELECT capital, name FROM world
+WHERE capital LIKE concat ('%', name, '%') AND capital > name
   
   --4.
   /*
