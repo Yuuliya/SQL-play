@@ -37,12 +37,14 @@ FROM nobel
 WHERE subject = 'Peace'
 AND yr >= 2000 
 
---9.
+-21.
 /*
-Find the countries that contain the letter x.
+Show all details (yr, subject, winner) of the Literature prize winners for 1980 to 1989 inclusive.
 */
-SELECT name FROM world
-  WHERE name LIKE '%x%'
+SELECT yr, subject, winner
+FROM nobel
+WHERE subject = 'Literature'
+AND yr >= 1980 AND yr <= 1989
 
 --10.
 /*
