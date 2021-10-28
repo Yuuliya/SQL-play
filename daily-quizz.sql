@@ -1,17 +1,7 @@
-
--15.
 /*
-Find the capital and the name where the capital is an extension of name of the country.
-*/
-SELECT capital, name FROM world
-WHERE capital LIKE concat ('%', name, '%') AND capital > name
-  
-  -16.
-  /*
-Show the name and the extension where the capital is an extension of name of the country.
-*/
-SELECT name, REPLACE(capital, name, '')
-FROM world WHERE capital LIKE concat(name, '%') AND capital > name
+nobel(yr, subject, winner)
+*/ 
+
 
 --5.
 /*
@@ -98,7 +88,19 @@ FROM world
 WHERE capital LIKE concat ('%', name, '%')
 
 
-
+-15.
+/*
+Find the capital and the name where the capital is an extension of name of the country.
+*/
+SELECT capital, name FROM world
+WHERE capital LIKE concat ('%', name, '%') AND capital > name
+  
+  -16.
+  /*
+Show the name and the extension where the capital is an extension of name of the country.
+*/
+SELECT name, REPLACE(capital, name, '')
+FROM world WHERE capital LIKE concat(name, '%') AND capital > name
 
 
 
