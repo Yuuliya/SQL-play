@@ -28,18 +28,14 @@ SELECT yr, subject
 FROM nobel
 WHERE winner = 'Albert Einstein'
 
---8.
+-20.
 /*
-Find the country that has all the vowels and no spaces in its name.
+Give the name of the 'Peace' winners since the year 2000, including 2000.
 */
-SELECT name
-   FROM world
-WHERE name LIKE '%a%' AND 
-name  LIKE '%e%' AND 
-name  LIKE '%i%' AND 
-name  LIKE '%o%' AND 
-name  LIKE '%u%' AND 
-name NOT LIKE '% %'
+SELECT winner
+FROM nobel
+WHERE subject = 'Peace'
+AND yr >= 2000 
 
 --9.
 /*
