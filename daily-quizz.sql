@@ -3,13 +3,13 @@ nobel(yr, subject, winner)
 */ 
 
 
---5.
+--17.
 /*
-Show the name and capital where the name and the capital have the same number of characters.
+Change the query shown so that it displays Nobel prizes for 1950
 */
-SELECT name, capital
-  FROM world
- WHERE LENGTH (name) = LENGTH (capital)
+SELECT yr, subject, winner
+FROM nobel
+WHERE yr = 1950
  
  --6.
 /*
