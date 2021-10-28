@@ -11,14 +11,14 @@ SELECT yr, subject, winner
 FROM nobel
 WHERE yr = 1950
  
- --6.
+ -18.
 /*
-Show the name and per-capita GDP for those countries with a GDP of at least one trillion (1000000000000; that is 12 zeros). Round this value to the nearest 1000.
-Show per-capita GDP for the trillion dollar countries to the nearest $1000.
+Show who won the 1962 prize for Literature.
 */
-SELECT name, ROUND (gdp/population, -3)
-FROM world
-WHERE gdp >= 1000000000000
+SELECT winner
+FROM nobel
+WHERE yr = 1962
+AND subject = 'Literature'
 
 --7.
 /*
