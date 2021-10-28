@@ -20,13 +20,13 @@ FROM nobel
 WHERE yr = 1962
 AND subject = 'Literature'
 
---7.
+-19.
 /*
-Show the name and the capital where the first letters of each match. Don't include countries where the name and the capital are the same word.
+Show the year and subject that won 'Albert Einstein' his prize.
 */
-SELECT name, capital
-FROM world
-WHERE name <> capital AND LEFT (name,1) = LEFT(capital,1)
+SELECT yr, subject
+FROM nobel
+WHERE winner = 'Albert Einstein'
 
 --8.
 /*
