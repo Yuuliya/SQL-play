@@ -6,13 +6,12 @@ Find the capital and the name where the capital is an extension of name of the c
 SELECT capital, name FROM world
 WHERE capital LIKE concat ('%', name, '%') AND capital > name
   
-  --4.
+  -16.
   /*
-Show the name and population in millions and the GDP in billions for the countries of the continent 'South America'. Use the ROUND function to show the values to two decimal places.
+Show the name and the extension where the capital is an extension of name of the country.
 */
-SELECT name, ROUND(population/1000000, 2), ROUND(gdp/1000000000, 2)
-FROM world
-WHERE continent = 'South America'
+SELECT name, REPLACE(capital, name, '')
+FROM world WHERE capital LIKE concat(name, '%') AND capital > name
 
 --5.
 /*
