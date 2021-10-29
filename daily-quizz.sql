@@ -46,13 +46,18 @@ FROM nobel
 WHERE subject = 'Literature'
 AND yr >= 1980 AND yr <= 1989
 
---10.
+-22.
 /*
-Find the countries that have three or more a in the name.
+Show all details of the presidential winners:
+
+Theodore Roosevelt
+Woodrow Wilson
+Jimmy Carter
+Barack Obama
 */
-SELECT name
-FROM world
-WHERE name LIKE '%a%a%a%' 
+SELECT *
+FROM nobel
+WHERE winner IN ('Theodore Roosevelt', 'Woodrow Wilson','Jimmy Carter', 'Barack Obama')
 
 --11.
 /*
