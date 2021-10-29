@@ -94,12 +94,14 @@ FROM nobel
 WHERE (subject = 'Medicine' AND yr < '1910')OR (subject = 'Literature' AND yr >= '2004')
 
 
--15.
+-27.
 /*
-Find the capital and the name where the capital is an extension of name of the country.
+List the winners, year and subject where the winner starts with Sir. Show the the most recent first, then by name order.
 */
-SELECT capital, name FROM world
-WHERE capital LIKE concat ('%', name, '%') AND capital > name
+SELECT winner, yr, subject
+FROM nobel
+WHERE winner LIKE 'sir%'
+ORDER BY yr DESC, winner
   
   -16.
   /*
