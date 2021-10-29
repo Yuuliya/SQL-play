@@ -59,13 +59,13 @@ SELECT *
 FROM nobel
 WHERE winner IN ('Theodore Roosevelt', 'Woodrow Wilson','Jimmy Carter', 'Barack Obama')
 
---11.
+-23.
 /*
-Find the countries that have "t" as the second character.
+Show the winners with first name John.
 */
-SELECT name FROM world
-WHERE name LIKE '_t%'
-ORDER by name
+SELECT winner
+FROM nobel
+WHERE winner LIKE ('John%')
 
 --12.
 /*
