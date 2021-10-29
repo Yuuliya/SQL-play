@@ -75,13 +75,14 @@ SELECT yr, subject, winner
 FROM nobel
 WHERE (subject = 'Physics' AND yr = '1980') OR (subject = 'Chemistry' AND yr = '1984')
 
---13.
+-25.
 /*
-Find the country where the capital is the country plus "City".
+Show the year, subject, and name of winners for 1980 excluding Chemistry and Medicine.
 */
-SELECT name
-  FROM world
- WHERE capital = concat(name, ' City')
+SELECT yr, subject, winner
+FROM nobel
+WHERE yr = 1980
+AND subject NOT IN ('Chemistry', 'Medicine')
 
 --14.
 /*
