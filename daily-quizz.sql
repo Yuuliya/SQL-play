@@ -103,7 +103,7 @@ FROM nobel
 WHERE winner LIKE 'sir%'
 ORDER BY yr DESC, winner
   
-  -28.
+ -28.
   /*
 Show the 1984 winners and subject ordered by subject and winner name; but list Chemistry and Physics last.
 */
