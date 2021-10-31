@@ -3,7 +3,7 @@ nobel(yr, subject, winner)
 */ 
 
 
---17.
+-17.
 /*
 Change the query shown so that it displays Nobel prizes for 1950
 */
@@ -11,7 +11,7 @@ SELECT yr, subject, winner
 FROM nobel
 WHERE yr = 1950
  
- -18.
+-18.
 /*
 Show who won the 1962 prize for Literature.
 */
