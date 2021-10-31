@@ -103,12 +103,13 @@ FROM nobel
 WHERE winner LIKE 'sir%'
 ORDER BY yr DESC, winner
   
-  -16.
+  -28.
   /*
-Show the name and the extension where the capital is an extension of name of the country.
+Show the 1984 winners and subject ordered by subject and winner name; but list Chemistry and Physics last.
 */
-SELECT name, REPLACE(capital, name, '')
-FROM world WHERE capital LIKE concat(name, '%') AND capital > name
+SELECT winner, subject FROM nobel
+    WHERE yr = 1984
+ORDER BY subject IN ('Physics', 'Chemistry') ASC, subject, winner
 
 
 
