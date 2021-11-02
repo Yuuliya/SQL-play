@@ -56,3 +56,9 @@ WHERE population IN (SELECT population
 SELECT name 
   FROM world 
  WHERE gdp > (SELECT MAX(gdp) FROM world WHERE continent = 'Europe')
+ 
+ --7.
+ /*
+ Find the largest country (by area) in each continent, show the continent, the name and the area.
+ */
+ 
