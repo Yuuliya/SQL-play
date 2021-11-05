@@ -20,3 +20,11 @@ List all printer makers. Result set: maker.
 SELECT DISTINCT maker
 FROM Product
 WHERE type = 'Printer'
+
+--3
+/*
+Find all records from the Printer table containing data about color printers.
+*/
+SELECT *
+FROM Printer
+WHERE color = 'y'
