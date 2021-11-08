@@ -38,3 +38,23 @@ FROM Product INNER JOIN
 Laptop ON Product.model = Laptop.model
 WHERE hd >= 10
 
+--5.
+/*
+Get hard drive capacities that are identical for two or more PCs.
+Result set: hd.
+*/
+SELECT hd
+FROM PC
+GROUP BY hd
+HAVING COUNT(hd) >= 2
+
+--6.
+/*
+For each maker producing laptops with a hard drive capacity of 10 Gb or higher, find the speed of such laptops. Result set: maker, speed.
+*/
+SELECT DISTINCT Product.maker, Laptop.speed
+FROM Product INNER JOIN
+Laptop ON Laptop.model = Product.model
+WHERE hd >= 10
+
+
