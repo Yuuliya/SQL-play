@@ -57,4 +57,25 @@ FROM Product INNER JOIN
 Laptop ON Laptop.model = Product.model
 WHERE hd >= 10
 
+--7.
+/*
+Get the models and prices for all commercially available products (of any type) produced by maker B.
+*/
+SELECT PC.model, PC.price
+FROM Product INNER JOIN PC
+ON PC.model = Product.model
+WHERE maker = 'B'
+UNION
+SELECT Laptop.model, Laptop.price
+FROM Product INNER JOIN Laptop
+ON Laptop.model = Product.model
+WHERE maker = 'B'
+UNION
+SELECT Printer.model, Printer.price
+FROM Product INNER JOIN Printer
+ON Printer.model = Product.model
+WHERE maker = 'B'
+
+
+
 
