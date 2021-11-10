@@ -76,6 +76,17 @@ FROM Product INNER JOIN Printer
 ON Printer.model = Product.model
 WHERE maker = 'B'
 
+--8.
+/*
+Find the makers producing PCs but not laptops.
+*/
+SELECT maker FROM Product
+WHERE type = 'PC'
+Except
+SELECT maker from Product
+WHERE type = 'Laptop'
+
+
 
 
 
