@@ -86,6 +86,14 @@ Except
 SELECT maker from Product
 WHERE type = 'Laptop'
 
+--9.
+/*
+Find the makers of PCs with a processor speed of 450 MHz or more. Result set: maker.
+*/
+SELECT DISTINCT maker
+FROM Product INNER JOIN PC
+ON PC.model = Product.model
+WHERE speed >= 450
 
 
 
