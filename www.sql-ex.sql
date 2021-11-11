@@ -95,6 +95,17 @@ FROM Product INNER JOIN PC
 ON PC.model = Product.model
 WHERE speed >= 450
 
+-10.
+/*
+Find the printer models having the highest price. Result set: model, price.
+*/
+SELECT DISTINCT model, price FROM PRINTER
+WHERE price = (SELECT MAX(price)
+FROM Printer
+)
+
+
+
 
 
 
