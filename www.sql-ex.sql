@@ -111,6 +111,14 @@ Find out the average speed of PCs.
 SELECT AVG (speed) 
 FROM PC
 
+-12.
+/*
+Find out the average speed of the PCs produced by maker A.
+*/
+SELECT AVG(speed) AS avg_speed
+FROM PC INNER JOIN Product
+ON PC.model = Product.model
+WHERE Product.maker = 'A'
 
 
 
