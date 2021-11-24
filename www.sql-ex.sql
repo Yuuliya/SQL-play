@@ -122,6 +122,16 @@ WHERE Product.maker = 'A'
 
 -13.
 /*
+Get hard drive capacities that are identical for two or more PCs.
+Result set: hd.
+*/
+SELECT hd
+FROM PC
+GROUP BY hd
+HAVING COUNT (hd) >=2
+
+-14.
+/*
 Classes(class, type, country, numGuns, bore, displacement)
 Ships(name, class, launched)
 Battles(name, date)
